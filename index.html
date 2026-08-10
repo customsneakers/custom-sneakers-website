@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Custom Sneakers — Official Website</title>
+
+  <meta
+    name="description"
+    content="Official website of Custom Sneakers, a registered trademark in Portugal."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      color: #111111;
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+
+    header {
+      width: 100%;
+      height: 82px;
+      display: flex;
+      align-items: center;
+      padding: 0 6vw;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .header-logo {
+      display: block;
+      max-width: 180px;
+      max-height: 42px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* MAIN */
+
+    main {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 24px;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 1100px;
+      text-align: center;
+    }
+
+    .symbol-logo {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100px;
+      max-height: 100px;
+      margin: 0 auto 34px;
+      object-fit: contain;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 88px);
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      line-height: 1.05;
+      margin-left: 0.18em;
+      white-space: nowrap;
+    }
+
+    .official {
+      margin-top: 32px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.38em;
+      color: #777777;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 54px;
+      height: 1px;
+      background: #dddddd;
+      margin: 38px auto;
+    }
+
+    .trademark {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #171717;
+    }
+
+    .registration {
+      margin-top: 3px;
+      font-size: 13px;
+      line-height: 1.8;
+      color: #777777;
+    }
+
+    .contact {
+      margin-top: 34px;
+      font-size: 13px;
+      line-height: 1.9;
+      color: #777777;
+    }
+
+    .contact a {
+      color: #111111;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .development {
+      margin-top: 38px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.34em;
+      color: #777777;
+      text-transform: uppercase;
+    }
+
+    /* FOOTER */
+
+    footer {
+      width: 100%;
+      padding: 24px;
+      text-align: center;
+      border-top: 1px solid #eeeeee;
+      font-size: 11px;
+      color: #999999;
+      letter-spacing: 0.05em;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      header {
+        height: 72px;
+        padding: 0 24px;
+      }
+
+      .header-logo {
+        max-width: 145px;
+        max-height: 36px;
+      }
+
+      main {
+        padding: 55px 22px;
+      }
+
+      .symbol-logo {
+        max-width: 82px;
+        max-height: 82px;
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        font-size: clamp(31px, 9vw, 48px);
+        letter-spacing: 0.11em;
+        margin-left: 0.11em;
+        white-space: normal;
+      }
+
+      .official {
+        margin-top: 26px;
+        font-size: 9px;
+        letter-spacing: 0.3em;
+      }
+
+      .divider {
+        margin: 32px auto;
+      }
+
+      .trademark,
+      .registration,
+      .contact {
+        font-size: 12px;
+      }
+
+      .development {
+        font-size: 9px;
+        letter-spacing: 0.25em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img
+      src="logo-header.png"
+      alt="Custom Sneakers"
+      class="header-logo"
+    >
+  </header>
+
+  <main>
+    <div class="content">
+
+      <img
+        src="logo-symbol.png"
+        alt="Custom Sneakers logo"
+        class="symbol-logo"
+      >
+
+      <h1>CUSTOM SNEAKERS</h1>
+
+      <div class="official">
+        Official Website
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="trademark">
+        Custom Sneakers is a registered trademark in Portugal.
+      </div>
+
+      <div class="registration">
+        Portuguese Trademark Registration No. 766189
+      </div>
+
+      <div class="contact">
+        Official website:
+        <a href="https://custom-sneakers.com/">
+          custom-sneakers.com
+        </a>
+        <br>
+
+        Contact:
+        <a href="mailto:info@custom-sneakers.com">
+          info@custom-sneakers.com
+        </a>
+      </div>
+
+      <div class="development">
+        Website currently under development.
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Custom Sneakers. All rights reserved.
+  </footer>
+
+</body>
+</html>
