@@ -4,13 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Custom Sneakers - Official Website</title>
+  <title>Custom Sneakers — Official Website</title>
   <meta
     name="description"
     content="Official website of Custom Sneakers, a registered trademark in Portugal."
   >
 
   <style>
+    :root {
+      --background: #0f0f0f;
+      --text: #ffffff;
+      --gold: #E6D5C0;
+      --muted-border: rgba(255, 255, 255, 0.10);
+      --gold-border: rgba(230, 213, 192, 0.38);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -26,8 +34,8 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      background: #ffffff;
-      color: #000000;
+      background: var(--background);
+      color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
@@ -52,8 +60,8 @@
       display: block;
       width: auto;
       height: auto;
-      max-width: 180px;
-      max-height: 180px;
+      max-width: 190px;
+      max-height: 220px;
       margin: 0 auto 42px;
       object-fit: contain;
     }
@@ -63,41 +71,46 @@
       font-weight: 600;
       letter-spacing: 0.30em;
       line-height: 1.6;
-      color: #000000;
+      color: var(--text);
       text-transform: uppercase;
     }
 
     .divider {
       width: 64px;
       height: 1px;
-      background: #000000;
+      background: var(--gold);
       margin: 42px auto;
-      opacity: 0.22;
+      opacity: 0.55;
     }
 
     .trademark {
       font-size: 15px;
       line-height: 1.8;
-      color: #000000;
+      color: var(--text);
+    }
+
+    .brand-name {
+      color: var(--gold);
+      font-weight: 600;
     }
 
     .registration {
       margin-top: 4px;
       font-size: 14px;
       line-height: 1.8;
-      color: #000000;
+      color: var(--text);
     }
 
     .contact {
       margin-top: 34px;
       font-size: 14px;
       line-height: 2;
-      color: #000000;
+      color: var(--text);
     }
 
     .contact a,
     .facebook-group a {
-      color: #000000;
+      color: var(--gold);
       text-decoration: none;
       font-weight: 600;
     }
@@ -111,7 +124,7 @@
       margin-top: 16px;
       font-size: 14px;
       line-height: 1.8;
-      color: #000000;
+      color: var(--text);
     }
 
     .social-links {
@@ -128,9 +141,9 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid #d8d8d8;
+      border: 1px solid var(--gold-border);
       border-radius: 50%;
-      background: #ffffff;
+      background: transparent;
       transition:
         background-color 0.2s ease,
         border-color 0.2s ease,
@@ -146,17 +159,17 @@
     }
 
     .social-link:hover {
-      background: #000000;
-      border-color: #000000;
+      background: var(--gold);
+      border-color: var(--gold);
       transform: translateY(-2px);
     }
 
     .social-link:hover img {
-      filter: invert(1);
+      filter: brightness(0) saturate(100%);
     }
 
     .social-link:focus-visible {
-      outline: 2px solid #000000;
+      outline: 2px solid var(--gold);
       outline-offset: 3px;
     }
 
@@ -164,10 +177,14 @@
       width: 100%;
       padding: 24px;
       text-align: center;
-      border-top: 1px solid #eeeeee;
+      border-top: 1px solid var(--muted-border);
       font-size: 11px;
-      color: #000000;
+      color: var(--text);
       letter-spacing: 0.04em;
+    }
+
+    footer .brand-name {
+      font-weight: 600;
     }
 
     @media (max-width: 700px) {
@@ -180,8 +197,8 @@
       }
 
       .symbol-logo {
-        max-width: 120px;
-        max-height: 120px;
+        max-width: 125px;
+        max-height: 150px;
         margin-bottom: 34px;
       }
 
@@ -252,7 +269,7 @@
       <div class="divider"></div>
 
       <div class="trademark">
-        Custom Sneakers is a registered trademark in Portugal.
+        <span class="brand-name">Custom Sneakers</span> is a registered trademark in Portugal.
       </div>
 
       <div class="registration">
@@ -294,7 +311,7 @@
           title="Facebook"
         >
           <img
-            src="https://cdn.simpleicons.org/facebook/000000"
+            src="https://cdn.simpleicons.org/facebook/E6D5C0"
             alt=""
             aria-hidden="true"
           >
@@ -309,7 +326,7 @@
           title="Instagram"
         >
           <img
-            src="https://cdn.simpleicons.org/instagram/000000"
+            src="https://cdn.simpleicons.org/instagram/E6D5C0"
             alt=""
             aria-hidden="true"
           >
@@ -324,7 +341,7 @@
           title="Pinterest"
         >
           <img
-            src="https://cdn.simpleicons.org/pinterest/000000"
+            src="https://cdn.simpleicons.org/pinterest/E6D5C0"
             alt=""
             aria-hidden="true"
           >
@@ -339,7 +356,7 @@
           title="X"
         >
           <img
-            src="https://cdn.simpleicons.org/x/000000"
+            src="https://cdn.simpleicons.org/x/E6D5C0"
             alt=""
             aria-hidden="true"
           >
@@ -354,7 +371,7 @@
           title="TikTok"
         >
           <img
-            src="https://cdn.simpleicons.org/tiktok/000000"
+            src="https://cdn.simpleicons.org/tiktok/E6D5C0"
             alt=""
             aria-hidden="true"
           >
@@ -366,7 +383,7 @@
   </main>
 
   <footer>
-    © 2026 Custom Sneakers. All rights reserved.
+    © 2026 <span class="brand-name">Custom Sneakers</span>. All rights reserved.
   </footer>
 
 </body>
