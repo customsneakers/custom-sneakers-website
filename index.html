@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Custom Sneakers — Official Website</title>
+  <title>Custom Sneakers - Official Website</title>
   <meta
     name="description"
     content="Official website of Custom Sneakers, a registered trademark in Portugal."
@@ -17,6 +17,7 @@
       --gold: #E6D5C0;
       --muted-border: rgba(255, 255, 255, 0.10);
       --gold-border: rgba(230, 213, 192, 0.38);
+      --section-gap: 34px;
     }
 
     * {
@@ -56,13 +57,21 @@
       text-align: center;
     }
 
+    /* Every major block below uses exactly the same vertical spacing. */
+    .content-flow {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--section-gap);
+    }
+
     .symbol-logo {
       display: block;
       width: auto;
       height: auto;
       max-width: 190px;
       max-height: 220px;
-      margin: 0 auto 42px;
       object-fit: contain;
     }
 
@@ -79,13 +88,18 @@
       width: 64px;
       height: 1px;
       background: var(--gold);
-      margin: 42px auto;
       opacity: 0.55;
     }
 
-    .trademark {
-      font-size: 15px;
-      line-height: 1.8;
+    .info-group {
+      width: 100%;
+    }
+
+    .info-line,
+    .contact,
+    .facebook-group {
+      font-size: 14px;
+      line-height: 1.9;
       color: var(--text);
     }
 
@@ -95,17 +109,7 @@
     }
 
     .registration {
-      margin-top: 4px;
-      font-size: 14px;
-      line-height: 1.8;
-      color: var(--text);
-    }
-
-    .contact {
-      margin-top: 34px;
-      font-size: 14px;
-      line-height: 2;
-      color: var(--text);
+      margin-top: 2px;
     }
 
     .contact a,
@@ -120,19 +124,11 @@
       text-decoration: underline;
     }
 
-    .facebook-group {
-      margin-top: 16px;
-      font-size: 14px;
-      line-height: 1.8;
-      color: var(--text);
-    }
-
     .social-links {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
-      margin-top: 30px;
     }
 
     .social-link {
@@ -188,6 +184,10 @@
     }
 
     @media (max-width: 700px) {
+      :root {
+        --section-gap: 28px;
+      }
+
       main {
         padding: 54px 22px 48px;
       }
@@ -199,7 +199,6 @@
       .symbol-logo {
         max-width: 125px;
         max-height: 150px;
-        margin-bottom: 34px;
       }
 
       .development {
@@ -210,27 +209,16 @@
 
       .divider {
         width: 52px;
-        margin: 34px auto;
       }
 
-      .trademark,
-      .registration,
+      .info-line,
       .contact,
       .facebook-group {
         font-size: 12px;
       }
 
-      .contact {
-        margin-top: 28px;
-      }
-
-      .facebook-group {
-        margin-top: 14px;
-      }
-
       .social-links {
         gap: 10px;
-        margin-top: 26px;
       }
 
       .social-link {
@@ -256,126 +244,112 @@
   <main>
     <div class="content">
 
-      <img
-        src="logo-symbol.png"
-        alt="Custom Sneakers logo"
-        class="symbol-logo"
-      >
+      <div class="content-flow">
 
-      <div class="development">
-        Website Currently Under Development
-      </div>
-
-      <div class="divider"></div>
-
-      <div class="trademark">
-        <span class="brand-name">Custom Sneakers</span> is a registered trademark in Portugal.
-      </div>
-
-      <div class="registration">
-        Portuguese Trademark Registration No. 766189
-      </div>
-
-      <div class="contact">
-        Official website:
-        <a href="https://custom-sneakers.com/">
-          custom-sneakers.com
-        </a>
-        <br>
-
-        Contact:
-        <a href="mailto:info@custom-sneakers.com">
-          info@custom-sneakers.com
-        </a>
-      </div>
-
-      <div class="facebook-group">
-        Official Facebook Group:
-        <a
-          href="https://www.facebook.com/groups/customsneakers"
-          target="_blank"
-          rel="noopener noreferrer"
+        <img
+          src="logo-symbol.png"
+          alt="Custom Sneakers logo"
+          class="symbol-logo"
         >
-          https://www.facebook.com/groups/customsneakers
-        </a>
-      </div>
 
-      <div class="social-links" aria-label="Official social media profiles">
+        <div class="development">
+          Website Currently Under Development
+        </div>
 
-        <a
-          class="social-link"
-          href="https://www.facebook.com/customsneakerscommunity"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Custom Sneakers on Facebook"
-          title="Facebook"
-        >
-          <img
-            src="https://cdn.simpleicons.org/facebook/E6D5C0"
-            alt=""
-            aria-hidden="true"
+        <div class="divider"></div>
+
+        <div class="info-group">
+          <div class="info-line">
+            <span class="brand-name">Custom Sneakers</span> is a registered trademark in Portugal.
+          </div>
+
+          <div class="info-line registration">
+            Portuguese Trademark Registration No. 766189
+          </div>
+        </div>
+
+        <div class="info-group contact">
+          Official Website:
+          <a href="https://custom-sneakers.com/">
+            custom-sneakers.com
+          </a>
+          <br>
+
+          Contact:
+          <a href="mailto:info@custom-sneakers.com">
+            info@custom-sneakers.com
+          </a>
+        </div>
+
+        <div class="info-group facebook-group">
+          Official Facebook Group:
+          <a
+            href="https://www.facebook.com/groups/customsneakers"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-        </a>
+            https://www.facebook.com/groups/customsneakers
+          </a>
+        </div>
 
-        <a
-          class="social-link"
-          href="https://www.instagram.com/customsneakerscommunity"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Custom Sneakers on Instagram"
-          title="Instagram"
-        >
-          <img
-            src="https://cdn.simpleicons.org/instagram/E6D5C0"
-            alt=""
-            aria-hidden="true"
-          >
-        </a>
+        <div class="social-links" aria-label="Official social media profiles">
 
-        <a
-          class="social-link"
-          href="https://www.pinterest.com/customsneakerscommunity"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Custom Sneakers on Pinterest"
-          title="Pinterest"
-        >
-          <img
-            src="https://cdn.simpleicons.org/pinterest/E6D5C0"
-            alt=""
-            aria-hidden="true"
+          <a
+            class="social-link"
+            href="https://www.facebook.com/customsneakerscommunity"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Custom Sneakers on Facebook"
+            title="Facebook"
           >
-        </a>
+            <img src="https://cdn.simpleicons.org/facebook/E6D5C0" alt="" aria-hidden="true">
+          </a>
 
-        <a
-          class="social-link"
-          href="https://x.com/custom_snkrs"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Custom Sneakers on X"
-          title="X"
-        >
-          <img
-            src="https://cdn.simpleicons.org/x/E6D5C0"
-            alt=""
-            aria-hidden="true"
+          <a
+            class="social-link"
+            href="https://www.instagram.com/customsneakerscommunity"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Custom Sneakers on Instagram"
+            title="Instagram"
           >
-        </a>
+            <img src="https://cdn.simpleicons.org/instagram/E6D5C0" alt="" aria-hidden="true">
+          </a>
 
-        <a
-          class="social-link"
-          href="https://www.tiktok.com/@customsneakerscommunity"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Custom Sneakers on TikTok"
-          title="TikTok"
-        >
-          <img
-            src="https://cdn.simpleicons.org/tiktok/E6D5C0"
-            alt=""
-            aria-hidden="true"
+          <a
+            class="social-link"
+            href="https://www.pinterest.com/customsneakerscommunity"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Custom Sneakers on Pinterest"
+            title="Pinterest"
           >
-        </a>
+            <img src="https://cdn.simpleicons.org/pinterest/E6D5C0" alt="" aria-hidden="true">
+          </a>
+
+          <a
+            class="social-link"
+            href="https://x.com/custom_snkrs"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Custom Sneakers on X"
+            title="X"
+          >
+            <img src="https://cdn.simpleicons.org/x/E6D5C0" alt="" aria-hidden="true">
+          </a>
+
+          <a
+            class="social-link"
+            href="https://www.tiktok.com/@customsneakerscommunity"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Custom Sneakers on TikTok"
+            title="TikTok"
+          >
+            <img src="https://cdn.simpleicons.org/tiktok/E6D5C0" alt="" aria-hidden="true">
+          </a>
+
+        </div>
 
       </div>
 
